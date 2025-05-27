@@ -66,6 +66,9 @@ const WhatsAppFloat = () => {
         onClick={handleWhatsAppClick}
         className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
         size="icon"
+        style={{
+          animation: 'slowPulse 15s infinite'
+        }}
       >
         <svg
           viewBox="0 0 24 24"
@@ -76,8 +79,16 @@ const WhatsAppFloat = () => {
         </svg>
       </Button>
 
-      {/* Ripple Effect */}
-      <div className="absolute inset-0 rounded-full bg-green-500/30 animate-ping"></div>
+      <style jsx>{`
+        @keyframes slowPulse {
+          0%, 98% {
+            transform: scale(1);
+          }
+          1%, 2% {
+            transform: scale(1.1);
+          }
+        }
+      `}</style>
     </div>
   );
 };
