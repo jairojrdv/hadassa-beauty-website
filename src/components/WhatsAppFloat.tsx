@@ -36,7 +36,8 @@ const WhatsAppFloat = () => {
     <div className="fixed bottom-6 right-6 z-50">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-lg p-3 max-w-xs border border-hadassa-beige/30 animate-bounce">
+        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-lg p-3 max-w-xs border border-hadassa-beige/30 animate-bounce"
+        style={{ animationDuration: '6s' }}>
           <div className="flex items-start gap-2">
             <MessageCircle className="h-5 w-5 text-hadassa-brown mt-0.5" />
             <div>
@@ -65,6 +66,7 @@ const WhatsAppFloat = () => {
       <Button
         onClick={handleWhatsAppClick}
         className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-slowPulse"
+        style={{ animationDuration: '6s' }}
         size="icon"
       >
         <svg
